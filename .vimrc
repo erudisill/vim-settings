@@ -32,24 +32,25 @@ filetype plugin indent on
 :syntax enable
 :set number
 :colorscheme zenburn
+:set laststatus=2
 
 " Python stuff
 :let python_highlight_all=1
 :let NERDTreeIgnore=['\.pyc$','\~$']	" ignore files in NERDTree
-au BufNewFile,BufRead *.py:
-    \ set tabstop=4
-    \ set softtablstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
+au BufNewFile,BufRead *.py 
+    \ set tabstop=8 		|
+    \ set softtabstop=4		|
+    \ set shiftwidth=4		|
+    \ set textwidth=79		|
+    \ set expandtab		|
+    \ set autoindent		|
     \ set fileformat=unix
 
 " Web stuff
-au BufNewFile,BufRead *.js, *.html, *.css:
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+au BufNewFile,BufRead *.js,*.html,*.css
+    \ set tabstop=2		|
+    \ set softtabstop=2		|
+    \ set shiftwidth=2		
 
 
 :set clipboard=unnamed
